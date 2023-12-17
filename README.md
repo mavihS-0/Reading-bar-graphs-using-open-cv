@@ -12,12 +12,13 @@ This script takes a bar graph image as input and uses image processing technique
 - Libraries:
   - `csv`
   - `opencv-python (cv2)`
+  - `tkinter`
   - `numpy(optional)`
 
 ## Usage
 
 ### Input
-- Replace `bar.png` with the path to your bar graph image. The output will be saved as `output.csv`.
+- Select image file and give the required information using the ui. The output will be saved as `output.csv`.
 
 ### Output Format
 - The generated CSV file contains data points with x and y coordinates representing the positions and heights of the bars on the graph.
