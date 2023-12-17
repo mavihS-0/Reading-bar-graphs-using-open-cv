@@ -24,4 +24,4 @@ This script takes a bar graph image as input and uses image processing technique
 
 ## Authors
 - [Shivam](https://github.com/mavihS-0)
-- [Dhairya](...)
+- [Dhairya](https://github.com/Dhaaairyaa)
