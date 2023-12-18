@@ -24,12 +24,16 @@ def read_graph():
 
     contours, _ = cv2.findContours(thresholded, cv2.RETR_CCOMP, cv2.CHAIN_APPROX_SIMPLE)
 
+    filtered_contours = [contour for contour in contours if cv2.contourArea(contour) > 300]
+    
     data_points = []
-    for contour in contours:
+    for contour in filtered_contours:
         x, y, w, h = cv2.boundingRect(contour)
         data_points.append((x, y, w, h))
 
     cv2.drawContours(image, contours, -1, (0, 255, 0), 2)
+    plt.imshow(image)
+    plt.show()
     
     sorted_data_points = sorted(data_points, key=lambda x: x[0])
     x_range = x_range.split('-')
